@@ -21,6 +21,7 @@ float datos[3];
 
 void setup()
 {
+  pinMode(MOTOR, OUTPUT);
  //inicializamos el NRF24L01 
   radio.begin();
   //inicializamos el puerto serie
@@ -43,7 +44,7 @@ void loop() {
      radio.read(datos,sizeof(datos));
      
      porcentaje = map( datos[0], 0, 255, 0, 1023); //Conversion de los datos
-     analogWrite (MOTOR, porcentaje); //mandando el valor al pin
+     analogWrite (MOTOR, porcentaje); //Escritura en el pin motor
      
      //reportamos por el puerto serial los datos recibidos
      Serial.print("Dato0= " );
