@@ -3,7 +3,7 @@
 #include <RF24.h>
  
 //Declaremos los pines CE y el CSN
-#define CE_PIN 9
+#define CE_PIN 8
 #define CSN_PIN 10
 
 int MOTOR = 5; //Pin del motor
@@ -43,7 +43,7 @@ void loop() {
      radio.read(datos,sizeof(datos));
      
      porcentaje = map( datos[0], 0, 255, 0, 1023); //Conversion de los datos
-     analogWrite (MOTOR, porcentaje);
+     analogWrite (MOTOR, porcentaje); //mandando el valor al pin
      
      //reportamos por el puerto serial los datos recibidos
      Serial.print("Dato0= " );
