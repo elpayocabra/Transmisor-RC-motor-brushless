@@ -3,7 +3,7 @@
 #include <RF24.h>
 
 //Declaremos los pines CE y el CSN
-#define CE_PIN 9
+#define CE_PIN 8
 #define CSN_PIN 10
  
 //Variable con la dirección del canal por donde se va a transmitir
