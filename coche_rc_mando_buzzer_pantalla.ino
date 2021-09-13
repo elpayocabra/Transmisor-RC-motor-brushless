@@ -212,7 +212,7 @@ void setup()
  radio.openWritingPipe(direccion);
   Wire.begin();  //lineas del logo
   oled.begin(SSD1306_SWITCHCAPVCC, 0x3C); //lineas del logo
-  }
+  
 
  // iterate over the notes of the melody. 
   // Remember, the array is twice the number of notes (notes + durations)
